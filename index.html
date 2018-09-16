@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Weather App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">City Name</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Weather App</h1>
+							<p>Simple Weather Website created with JavaScript, Google Maps, and OpenWeather.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Get Real time weather data</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style3 fade-up">
+						<div class="inner">
+							<form action="/" method="post">
+        						<input id="city" type="text" placeHolder="Enter a city" required>
+    						</form>
+							
+							<button onclick="getLocation()" class = "ghost-button">See location</button>
+						    <!--The div element for the map -->
+						    <h2 id="coord" style = "text-align: center"></h2>
+						    <p></p>
+						    <div id="map"></div>
+						    <p></p>
+						    <h2 id="weather" style = "text-align: center"></h2>
+						  
+						    <script src="assets/js/myscript.js"></script>
+						    <!--Load the API from the specified URL
+						    * The async attribute allows the browser to render the page while the API loads
+						    * The key parameter will contain your own API key (which is not needed for this tutorial)
+						    * The callback parameter executes the initMap() function
+						    -->
+						    <script async defer
+						    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3o57G1olSN-zpVPmq34BfcGqRVBEXZ3M">
+						    </script>
+
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Edwin Yu. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
