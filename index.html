@@ -52,8 +52,25 @@
 						    <h2 id="coord" style = "text-align: center"></h2>
 						    <p></p>
 						    <div id="map"></div>
-						    <p></p>
-						    <h2 id="weather" style = "text-align: center"></h2>
+
+						    <div class="features">
+								<section>
+									<h3>Condition</h3>
+									<h2 id="curr_condi"></h2>
+								</section>
+								<section>
+									<h3>Current Temperature</h3>
+									<h2 id="curr_temp"></h2>
+								</section>
+								<section>
+									<h3>Maximum Temperature</h3>
+									<h2 id="max_temp"></h2>
+								</section>
+								<section>
+									<h3>Minimum Temperature</h3>
+									<h2 id="min_temp"></h2>
+								</section>
+							</div>
 						  
 						    <script src="assets/js/myscript.js"></script>
 						    <!--Load the API from the specified URL
@@ -62,7 +79,7 @@
 						    * The callback parameter executes the initMap() function
 						    -->
 						    <script async defer
-						    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3o57G1olSN-zpVPmq34BfcGqRVBEXZ3M">
+						    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3o57G1olSN-zpVPmq34BfcGqRVBEXZ3M&callback=initMap">
 						    </script>
 
 							</div>
