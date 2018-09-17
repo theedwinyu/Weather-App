@@ -30,7 +30,7 @@ function getLocation(){
 
     // Begin accessing JSON data here
     if(weather.coord == undefined){
-      x.innerHTML = 'Please enter a valid City';
+      x.innerHTML = 'Please enter a valid city';
     } else {
       let weatherCoords = `Latitude: ${weather.coord.lat}, Longitude: ${weather.coord.lon}`;
       x.innerHTML = weatherCoords;
@@ -40,7 +40,7 @@ function getLocation(){
     }
 
     if(weather.main == undefined){
-      x.innerHTML = 'Please enter a valid City';
+      x.innerHTML = 'Please enter a valid city';
     } else {
       console.log(weather.weather[0].main);
       curr_condi.innerHTML = weather.weather[0].main;
