@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
 
 		<!-- Sidebar -->
@@ -43,11 +44,20 @@
 				<!-- One -->
 					<section id="one" class="wrapper style3 fade-up">
 						<div class="inner">
-							<form action="/" method="post">
-        						<input id="city" type="text" placeHolder="Enter a city" required>
-    						</form>
 							
-							<button onclick="getLocation()" class = "ghost-button">See location and weather</button>
+        					<input id="city" type="text" placeHolder="Enter a city" required>
+
+        					<script>
+								document.getElementById('city').onkeydown = function(event) {
+								    if (event.keyCode == 13) {
+								        getLocation();
+								    }
+								}
+							</script>
+    						
+    						<p></p>
+							
+							<button onclick="getLocation()">See location and weather</button>
 						    <!--The div element for the map -->
 						    <h2 id="coord" style = "text-align: center"></h2>
 						    <p></p>
@@ -55,19 +65,19 @@
 
 						    <div class="features">
 								<section>
-									<h3>Condition</h3>
+									<h3><i>Condition</i></h3>
 									<h2 id="curr_condi"></h2>
 								</section>
 								<section>
-									<h3>Current Temperature</h3>
+									<h3><i>Current Temperature</i></h3>
 									<h2 id="curr_temp"></h2>
 								</section>
 								<section>
-									<h3>Maximum Temperature</h3>
+									<h3><i>Maximum Temperature</i></h3>
 									<h2 id="max_temp"></h2>
 								</section>
 								<section>
-									<h3>Minimum Temperature</h3>
+									<h3><i>Minimum Temperature</i></h3>
 									<h2 id="min_temp"></h2>
 								</section>
 							</div>
